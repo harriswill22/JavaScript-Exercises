@@ -34,19 +34,36 @@
 
 //Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
 
-function vowelCount(str) {
+// function vowelCount(str) {
 
-    vowelsList= 'AEIOUaeiou'
-    vowelCount = 0;
+//     vowelsList= 'AEIOUaeiou'
+//     vowelCount = 0;
 
-    for(i = 0; i <str.length; i ++)
+//     for(i = 0; i <str.length; i ++)
 
-    if(vowelsList.indexOf(str[i]) !== -1)
-    {
-        vowelCount +=1;
-    }
-    {
-        return vowelCount;
+//     if(vowelsList.indexOf(str[i]) !== -1)
+//     {
+//         vowelCount +=1;
+//     }
+//     {
+//         return vowelCount;
+//     }
+// }
+// console.log(vowelCount("The quick brown fox"));
+
+function findLongestWord(str){
+
+
+const array1 = str.match(/\w[a-z]{0,}/gi)
+let result = array1[0];
+
+for( let i = 1; i <array1.length; i++) {
+
+    if(result.length < array1[i].length) {
+        result = array1[i];
     }
 }
-console.log(vowelCount("The quick brown fox"));
+return result;
+
+}
+console.log(findLongestWord('Web Development Tutorial'));
