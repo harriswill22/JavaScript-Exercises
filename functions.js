@@ -21,13 +21,32 @@
 
 // Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case. 
 
-function upperCase(str){
-    const array1 = str.split (' ')
-    let newArray1 = [];
+// function upperCase(str){
+//     const array1 = str.split (' ')
+//     let newArray1 = [];
     
-    for (let i = 0; i < array1.length; i++){
-        newArray1.push(array1[i].charAt(0).toUpperCase()+array1[i].slice(1));
+//     for (let i = 0; i < array1.length; i++){
+//         newArray1.push(array1[i].charAt(0).toUpperCase()+array1[i].slice(1));
+//     }
+//     return newArray1.join(' ')
+// }
+// console.log(upperCase('whole lotta gang'));
+
+//Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
+
+function vowelCount(str) {
+
+    vowelsList= 'AEIOUaeiou'
+    vowelCount = 0;
+
+    for(i = 0; i <str.length; i ++)
+
+    if(vowelsList.indexOf(str[i]) !== -1)
+    {
+        vowelCount +=1;
     }
-    return newArray1.join(' ')
+    {
+        return vowelCount;
+    }
 }
-console.log(upperCase('whole lotta gang'));
+console.log(vowelCount("The quick brown fox"));
