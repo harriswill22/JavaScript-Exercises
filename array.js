@@ -24,6 +24,18 @@
 // }
 
 // Write a JavaScript function to clone an array.
-var array_Clone = arra1 => arra1.slice(0);
-console.log(array_Clone([1, 2, 4, 0]));
-console.log(array_Clone([1, 2, [4, 0]])); 
+// var array_Clone = arra1 => arra1.slice(0);
+// console.log(array_Clone([1, 2, 4, 0]));
+// console.log(array_Clone([1, 2, [4, 0]])); 
+
+const names = ['cane','will','bill']
+rip = function (name) {  
+if (name === 'will') {
+    return true;
+}
+return false;
+
+}
+
+
+console.log(rip('bix'));
