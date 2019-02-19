@@ -68,3 +68,23 @@
 // }
 // console.log(findLongestWord('Web Development Tutorial'));
 
+function timeConversion(s) {
+    const time12 = Number(s.substring(0, 2))
+    if (s.substring(8, 10) === 'PM') {
+        let time24 = time12 + 12
+        if (time12 === 12) {
+            time24 = time12
+        }
+        return time24 + s.substring(2, 8)
+        
+    } else {
+        if (time12 === 12) {
+            return '00' +  s.substring(2, 8)
+        }
+        if (time12 < 10) {
+            return '0' + time12 + s.substring(2,8)
+        }
+        return time12 + s.substring(2, 8) 
+    }
+
+}

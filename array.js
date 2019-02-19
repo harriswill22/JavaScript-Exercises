@@ -28,14 +28,13 @@
 // console.log(array_Clone([1, 2, 4, 0]));
 // console.log(array_Clone([1, 2, [4, 0]])); 
 
-const names = ['cane','will','bill']
-rip = function (name) {  
-if (name === 'will') {
-    return true;
-}
-return false;
+// const names = ['cane','will','bill']
+// rip = function (name) {  
+// if (name === ' ') {
+//     return true;
+// }
+// return false;
 
-}
+// }
 
-
-console.log(rip('bix'));
+// console.log(rip('cane'));
