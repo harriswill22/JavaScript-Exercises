@@ -88,21 +88,34 @@
 //     }
 
 // }
-function fizzBuzz(num) {
-if(num % 3 === 0 ) {
-    return 'Buzz'
-}
-if (num % 15 === 0 ) {
-    return 'FizzBuzz'
-}
-if (num % 5 === 0 ) {
-    return 'FizzBuzz'
-}
+// function fizzBuzz(num) {
+// if(num % 3 === 0 ) {
+//     return 'Buzz';
+// }
+// if (num % 15 === 0 ) {
+//     return 'FizzBuzz';
+// }
+// if (num % 5 === 0 ) {
+//     return 'Fizz';
+// }
 
-return num.toString()
+// return num.toString()
 
-}
-for (i = 0; i <= 100; i++) {
-    console.log(fizzBuzz(i));
+// }
+// for (i = 0; i <= 100; i++) {
+//     console.log(fizzBuzz(i));
     
+// }
+
+// Recursion 
+const factorial =  function fac (num) {
+if (num === 1 ) {
+    return 1;
 }
+
+    return num * fac(num -1)
+};
+
+const result = factorial(10)
+console.log(result);
+
