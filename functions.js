@@ -32,7 +32,7 @@
 // }
 // console.log(upperCase('whole lotta gang'));
 
-//Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
+// Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
 
 // function vowelCount(str) {
 
@@ -68,23 +68,41 @@
 // }
 // console.log(findLongestWord('Web Development Tutorial'));
 
-function timeConversion(s) {
-    const time12 = Number(s.substring(0, 2))
-    if (s.substring(8, 10) === 'PM') {
-        let time24 = time12 + 12
-        if (time12 === 12) {
-            time24 = time12
-        }
-        return time24 + s.substring(2, 8)
+// function timeConversion(s) {
+//     const time12 = Number(s.substring(0, 2))
+//     if (s.substring(8, 10) === 'PM') {
+//         let time24 = time12 + 12
+//         if (time12 === 12) {
+//             time24 = time12
+//         }
+//         return time24 + s.substring(2, 8)
         
-    } else {
-        if (time12 === 12) {
-            return '00' +  s.substring(2, 8)
-        }
-        if (time12 < 10) {
-            return '0' + time12 + s.substring(2,8)
-        }
-        return time12 + s.substring(2, 8) 
-    }
+//     } else {
+//         if (time12 === 12) {
+//             return '00' +  s.substring(2, 8)
+//         }
+//         if (time12 < 10) {
+//             return '0' + time12 + s.substring(2,8)
+//         }
+//         return time12 + s.substring(2, 8) 
+//     }
 
+// }
+function fizzBuzz(num) {
+if(num % 3 === 0 ) {
+    return 'Buzz'
+}
+if (num % 15 === 0 ) {
+    return 'FizzBuzz'
+}
+if (num % 5 === 0 ) {
+    return 'FizzBuzz'
+}
+
+return num.toString()
+
+}
+for (i = 0; i <= 100; i++) {
+    console.log(fizzBuzz(i));
+    
 }
