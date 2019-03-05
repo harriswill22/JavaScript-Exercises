@@ -108,14 +108,14 @@
 // }
 
 // Recursion 
-const factorial =  function fac (num) {
-if (num === 1 ) {
-    return 1;
-}
+// const factorial =  function fac (num) {
+// if (num === 1 ) {
+//     return 1;
+// }
 
-    return num * fac(num -1)
-};
+//     return num * fac(num -1)
+// };
 
-const result = factorial(10)
-console.log(result);
+// const result = factorial(10)
+// console.log(result);
 
