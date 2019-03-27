@@ -2,6 +2,9 @@
 //Return a string in reverse 
 
 function reverseString(str){
-    
-    return 'Let\s Start'
+return str.split('')
+.reverse()
+.join('');
+
 }
+console.log(reverseString('hello'));
