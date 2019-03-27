@@ -23,10 +23,34 @@ function reverseString(str){
 
 //Challenge 2 Palindrome 
 
-function isPalindrome(str) { 
-    const revString = str.split('').reverse().join('')
+// function isPalindrome(str) { 
+//     const revString = str.split('').reverse().join('')
 
-    return revString === str;
+//     return revString === str;
+
+// }
+
+
+
+
+// Challenge 3: Reverse an Integer 
+// function reverseInt(int) {  
+//     const revString = int.toString().split('').reverse().join('');
+
+//     return parseInt(revString) * Math.sign(int);
+// }
+
+
+// Challenge 4: Capitalize Letters
+function capitalizeLetters(str) {
+    
+// const strArr = str.toLowerCase().split(' ');
+
+// for (let i = 0; i <strArr.length; i++ ){
+//     strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
+// }
+// return strArr.join(' ')
+
 
 }
 
@@ -35,6 +59,5 @@ function isPalindrome(str) {
 
 
 
-
-const output = isPalindrome('hello')
+const output = capitalizeLetters('i love javascript')
 console.log(output);
