@@ -114,25 +114,59 @@ function fizzBuzz() {
 
 function  longestWord(sen) {  
 
-    const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
-   
-    const sorted = wordArr.sort(function(a,b) {
-        return b.length - a.length;
-    });
+//     const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
+// //Sort by length
+//     const sorted = wordArr.sort((a,b) => b.length - a.length
+//     );
+// // if multiple words, put into array
+//     const longestWordArr = sorted.filter(word =>
+//         word.length === sorted[0].length
+//     );
 
-    const longestWordArr = sorted.filter(function (word) {
-        return word.length === sorted[0].length;
-    });
+// // check of more than one array val
+// if(longestWord.length === 1) {
+//     return longestWordArr[0]
 
-// check of ,oe than one array val
-if(longestWord.length === 1) {
-    return longestWordArr[0]
+// }return longestWord;
+
 }
 
+// Challenge 8 Array Chunking 
+
+function chunkArray(arr, len) {
+
+// Init chunked arr
+// const chunkedArr = [];
+// // Set index
+// let i = 0;
+// //Loop while index is less than the array length 
+// while(i < arr.length){
+//     //Slice out from the index to the index + the chunk length and push to the chinked array
+//     chunkedArr.push(arr.slice(i, i + len))
+//     // Increment by chink length 
+//     i += len;
+// }
+// return chunkedArr;
+
+// Solution 2 
+
+const chunkedArr = []
+
+arr.forEach(val => {
+    const last = chunkedArr[chunkedArr.length -1];
+    
+    //Checked if last and if last length is equal tot he chunk len
+    if(!last || last.length === len){
+        chunkedArr.push([val])
+    }else {
+        last.push(val);
+    }
+});
+return chunkedArr;
+
 }
 
 
 
-
-const output = longestWord('Hello my name is Will')
+const output = chunkArray([1,2,3,4,5,6,7,], 2)
 console.log(output);
