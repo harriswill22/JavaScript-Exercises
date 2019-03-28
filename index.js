@@ -152,21 +152,36 @@ function chunkArray(arr, len) {
 
 const chunkedArr = []
 
-arr.forEach(val => {
-    const last = chunkedArr[chunkedArr.length -1];
+// arr.forEach(val => {
+//     const last = chunkedArr[chunkedArr.length -1];
     
-    //Checked if last and if last length is equal tot he chunk len
-    if(!last || last.length === len){
-        chunkedArr.push([val])
-    }else {
-        last.push(val);
-    }
-});
-return chunkedArr;
+//     //Checked if last and if last length is equal tot he chunk len
+//     if(!last || last.length === len){
+//         chunkedArr.push([val])
+//     }else {
+//         last.push(val);
+//     }
+// });
+// return chunkedArr;
+
+}
+
+function flattenArray(arrays) {  
+    //Solution 1 
+// return arrays.reduce(function (a,b) { 
+//     return a.concat(b)
+
+// })
+
+//Solution 2
+// return [].concat.apply([], arrays)
+
+// Solution 3
+return [].concat(...arrays)
 
 }
 
 
 
-const output = chunkArray([1,2,3,4,5,6,7,], 2)
+const output = flattenArray([[1,2],[3,4],[5,6],[7]])
 console.log(output);
