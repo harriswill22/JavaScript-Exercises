@@ -89,27 +89,50 @@ function maxCharacter(str) {
 
 
 }
+// Challenge 6 Fizz
 
 function fizzBuzz() {
 
-    for (let i = 1; i <= 100; i++) {
-if(i % 15 === 0 ) {
-    console.log('FizzBuzz');
-} else if (i % 3 === 0) {
-    console.log('Fizz');
+//     for (let i = 1; i <= 100; i++) {
+// if(i % 15 === 0 ) {
+//     console.log('FizzBuzz');
+// } else if (i % 3 === 0) {
+//     console.log('Fizz');
     
-}else if (i % 5 === 0) {
-    console.log('FizzBuzz');
+// }else if (i % 5 === 0) {
+//     console.log('FizzBuzz');
     
-} else {
-    console.log(i);
+// } else {
+//     console.log(i);
+// }
+
+// }
+
+}
+
+// Challenge 7 LongestWord
+
+function  longestWord(sen) {  
+
+    const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
+   
+    const sorted = wordArr.sort(function(a,b) {
+        return b.length - a.length;
+    });
+
+    const longestWordArr = sorted.filter(function (word) {
+        return word.length === sorted[0].length;
+    });
+
+// check of ,oe than one array val
+if(longestWord.length === 1) {
+    return longestWordArr[0]
 }
 
 }
-}
 
 
 
 
-const output = fizzBuzz()
+const output = longestWord('Hello my name is Will')
 console.log(output);
