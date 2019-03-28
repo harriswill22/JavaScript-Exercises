@@ -177,11 +177,35 @@ function flattenArray(arrays) {
 // return [].concat.apply([], arrays)
 
 // Solution 3
-return [].concat(...arrays)
+// return [].concat(...arrays)
 
+}
+
+function isAnagram(str1, str2) { 
+// return formatStr(str1) === formatStr((str2))
+
+
+// }
+// function formatStr(str) { 
+//     return str 
+//     .replace(/[^\w]/g, '')
+//     .toLowerCase()
+//     .split('')
+//     .sort()
+//     .join('');
+}
+function letterChanges(str) { 
+let newStr = str.replace(/[a-z]/gi, function(char){
+    if(char == 'z'|| char === 'Z') {
+        return 'a';
+    }else {
+        return String.fromCharCode(char.CharCodeAt() + 1);
+    }
+});
+return newStr;
 }
 
 
 
-const output = flattenArray([[1,2],[3,4],[5,6],[7]])
+const output = isAnagram('Hello There')
 console.log(output);
