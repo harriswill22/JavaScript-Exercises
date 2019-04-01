@@ -195,17 +195,31 @@ function isAnagram(str1, str2) {
 //     .join('');
 }
 function letterChanges(str) { 
-let newStr = str.replace(/[a-z]/gi, function(char){
-    if(char == 'z'|| char === 'Z') {
-        return 'a';
-    }else {
-        return String.fromCharCode(char.CharCodeAt() + 1);
-    }
-});
-return newStr;
+// let newStr = str.replace(/[a-z]/gi, function(char){
+//     if(char == 'z'|| char === 'Z') {
+//         return 'a';
+//     }else {
+//         return String.fromCharCode(char.CharCodeAt() + 1);
+//     }
+// });
+// return newStr;
 }
 
 
+function addAll() {  
+var args = Array.prototype.slice.call(arguments)
+return arguments;
 
-const output = isAnagram('Hello There')
+
+
+
+
+
+}
+console.log(addAll(2,5,6,7));
+
+
+
+
+const output = addAll((2,5,6,7))
 console.log(output);
