@@ -246,28 +246,44 @@ function seekAndDestroy(arr, ...rest) {
 // console.log( seekAndDestroy([2,3,4,6,6,'hello'], 2,6, 'hello')); 
 
 function sortByHeight() { 
-const arr1 = [];
-const arr2 = [];
+// const arr1 = [];
+// const arr2 = [];
 
-a.forEach((val, i) =>{
-    if(val === -1){
-        arr1.push(i)
-    }else {
-        arr2.push(val);
-    }
+// a.forEach((val, i) =>{
+//     if(val === -1){
+//         arr1.push(i)
+//     }else {
+//         arr2.push(val);
+//     }
 
-});
+// });
 
-const sortArr = arr2.sort((a,b) => a-b);
+// const sortArr = arr2.sort((a,b) => a-b);
 
-arr1.forEach((val, i) => sortArr.splice(arr[i], 0, -1))
+// arr1.forEach((val, i) => sortArr.splice(arr[i], 0, -1))
 
-return sortArr;
+// return sortArr;
+
 }
 
-const a = [-1, 150, 190, 170, -1,-1,160,180];
-console.log(sortByHeight(a));
+// const a = [-1, 150, 190, 170, -1,-1,160,180];
+// console.log(sortByHeight(a));
 
+function missingLetters(str) {
+    // let compare = str.charCodeAt(0);
+    // let missing; 
+
+    // str.split('').map((char, i) =>{
+    //     if(str.charCodeAt(i) === compare) {
+    //         ++compare;
+    //     }else{
+    //         missing = String.fromCharCode(compare)
+    //     }
+    // });
+    // return missing;
+}
+
+// console.log(missingLetters('abceelmapwalf'));
 
 
 
