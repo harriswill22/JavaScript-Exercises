@@ -238,18 +238,37 @@ function sumAllPrimes(num) {
 }
 // console.log(sumAllPrimes(10));
 
-function seekAndDestroy(arr) { 
-const args = Array.from(arguments)
-
-function filterArr(arr) { 
-    return args.indexOf(arr) === -1; 
-
-}
-return arr.filter(filterArr);
+function seekAndDestroy(arr, ...rest) { 
+// return arr.filter(val => !rest.includes(val))
 
 }
 
-console.log( seekAndDestroy([2,3,4,6,6,'hello'], 2,6, 'hello')); 
+// console.log( seekAndDestroy([2,3,4,6,6,'hello'], 2,6, 'hello')); 
+
+function sortByHeight() { 
+const arr1 = [];
+const arr2 = [];
+
+a.forEach((val, i) =>{
+    if(val === -1){
+        arr1.push(i)
+    }else {
+        arr2.push(val);
+    }
+
+});
+
+const sortArr = arr2.sort((a,b) => a-b);
+
+arr1.forEach((val, i) => sortArr.splice(arr[i], 0, -1))
+
+return sortArr;
+}
+
+const a = [-1, 150, 190, 170, -1,-1,160,180];
+console.log(sortByHeight(a));
+
+
 
 
 
