@@ -207,12 +207,36 @@ function letterChanges(str) {
 
 
 function addAll(...numbers) {  
-let total = 0;
-numbers.forEach(num=> (total += num)
-)
-return total;
+// let total = 0;
+// numbers.forEach(num=> (total += num)
+// )
+// return total;
+// return numbers.reduce((acc, cur) => + cur)
 }
-console.log(addAll(2,5,6,7));
+// console.log(addAll(2,5,6,7));
+
+function sumAllPrimes(num) {
+let total = 0;
+
+function checkForPrime(i) { 
+    for(let j = 2; j < i; j++){
+        if(i % j === 0) {
+            return false
+        }
+
+    }
+    return true
+ }
+
+for(let i = 2; i <=num; i++ ){
+if(checkForPrime(i)){
+    total += i;
+    }
+}
+return total
+
+}
+console.log(sumAllPrimes(10));
 
 
 
