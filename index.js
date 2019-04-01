@@ -206,15 +206,11 @@ function letterChanges(str) {
 }
 
 
-function addAll() {  
-var args = Array.prototype.slice.call(arguments)
-return arguments;
-
-
-
-
-
-
+function addAll(...numbers) {  
+let total = 0;
+numbers.forEach(num=> (total += num)
+)
+return total;
 }
 console.log(addAll(2,5,6,7));
 
