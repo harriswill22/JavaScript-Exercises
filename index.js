@@ -286,9 +286,19 @@ function missingLetters(str) {
 // console.log(missingLetters('abceelmapwalf'));
 
 
+function evenOddSums(arr) {
+
+    let evenSum = 0;
+    let oddSum = 0;
+
+    arr.forEach(num=> (num % 2 === 0 ? (evenSum += num) : (oddSum += num)))
+        return [evenSum, oddSum];
+    };
+console.log(evenOddSums([50,60,60,45,71]));
 
 
 
 
-const output = addAll((2,5,6,7))
-console.log(output);
+
+// const output = addAll((2,5,6,7))
+// console.log(output);
