@@ -216,27 +216,41 @@ function addAll(...numbers) {
 // console.log(addAll(2,5,6,7));
 
 function sumAllPrimes(num) {
-let total = 0;
+// let total = 0;
 
-function checkForPrime(i) { 
-    for(let j = 2; j < i; j++){
-        if(i % j === 0) {
-            return false
-        }
+// function checkForPrime(i) { 
+//     for(let j = 2; j < i; j++){
+//         if(i % j === 0) {
+//         return false
+//     }
 
-    }
-    return true
- }
+//     }
+//     return true
+//  }
 
-for(let i = 2; i <=num; i++ ){
-if(checkForPrime(i)){
-    total += i;
-    }
+// for(let i = 2; i <=num; i++ ){
+// if(checkForPrime(i)){
+//     total += i;
+//     }
+// }
+// return total
+
 }
-return total
+// console.log(sumAllPrimes(10));
+
+function seekAndDestroy(arr) { 
+const args = Array.from(arguments)
+
+function filterArr(arr) { 
+    return args.indexOf(arr) === -1; 
 
 }
-console.log(sumAllPrimes(10));
+return arr.filter(filterArr);
+
+}
+
+console.log( seekAndDestroy([2,3,4,6,6,'hello'], 2,6, 'hello')); 
+
 
 
 
